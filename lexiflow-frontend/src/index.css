@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  * {
+    @apply selection:bg-signal-100 selection:text-ink-light;
+  }
+
+  html,
+  body {
+    @apply bg-paper-light dark:bg-paper-dark text-ink-light dark:text-ink-dark;
+    font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+  }
+
+  /* Always-visible focus ring — never remove outline:none without a visible replacement */
+  :focus-visible {
+    @apply outline-none ring-2 ring-focus-500 ring-offset-2 ring-offset-paper-light dark:ring-offset-paper-dark;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Lexend', system-ui, sans-serif;
+  }
+
+  /* Respect reduced-motion preference site-wide */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-focus-500 px-5 py-3
+      font-display font-medium text-white shadow-sm transition
+      hover:bg-focus-600 active:bg-focus-700
+      disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 border-focus-500
+      bg-transparent px-5 py-3 font-display font-medium text-focus-500 transition
+      hover:bg-focus-50 dark:hover:bg-focus-700/20
+      disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .card {
+    @apply rounded-xl2 border border-ink-light/10 bg-white/70 p-5 shadow-sm backdrop-blur-sm
+      dark:border-ink-dark/10 dark:bg-white/5;
+  }
+
+  .pill {
+    @apply rounded-full px-4 py-2 text-sm font-display font-medium transition;
+  }
+}
+
+@layer utilities {
+  /* Reader typography driven by AccessibilityContext inline styles + these font-family hooks */
+  .font-reader-standard {
+    font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+  }
+  .font-reader-dyslexic {
+    font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif;
+  }
+  .font-reader-lexend {
+    font-family: 'Lexend', system-ui, sans-serif;
+  }
+  .font-reader-arial {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* The single recurring motion signature: amber word-wash, used by ReadAloud + WhyAmIConfused */
+  .word-highlight-active {
+    @apply rounded-sm bg-signal-300/70 text-ink-light;
+  }
+}
