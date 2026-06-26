@@ -13,8 +13,6 @@ Built for dyslexic readers, ADHD students, English language learners, educators,
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Gemini](https://img.shields.io/badge/Gemini-2.5%20Flash-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)](https://ai.google.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
-[![Accessibility](https://img.shields.io/badge/Accessibility-First-4F8A6D?style=for-the-badge&logo=accessibility&logoColor=white)](#-accessibility-first-philosophy)
 
 </div>
 
