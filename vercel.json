@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/lexiflow-backend/api/index.py"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/lexiflow-frontend/$1"
+    }
+  ]
+}
